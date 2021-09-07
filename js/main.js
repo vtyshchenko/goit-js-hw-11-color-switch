@@ -19,13 +19,13 @@ stopBtn.addEventListener("click", onStopClick);
 function onStartClick() {
   intervalId = setInterval(changeColor, 1000);
   startBtn.disabled = true;
-  stopBtn.disabled = false;
+  stopBtn.disabled = !startBtn.disabled;
 }
 
 function onStopClick() {
   clearInterval(intervalId);
   startBtn.disabled = false;
-  stopBtn.disabled = true;
+  stopBtn.disabled = !startBtn.disabled;
 }
 
 function changeColor() {
